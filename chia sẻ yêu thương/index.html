@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chia Sẻ Yêu Thương</title>
+
+    <!-- CSS chính -->
+    <link rel="stylesheet" href="public/css/styles.css" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* Tỷ lệ 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="here" role="main"></div>
+    <header data-aos="fade-down" data-aos-duration="1200">
+        <div class="logo">
+            <h1>Chia Sẻ Yêu Thương</h1>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-menu">
+                <li class="navbar-item" data-aos="fade-right" data-aos-delay="100"><a href="index.html"
+                        class="navbar-link"><i class="fas fa-home"></i> Trang Chủ</a></li>
+                <li class="navbar-item" data-aos="fade-right" data-aos-delay="200"><a href="/yeuthuong/hoatdong.html"
+                        class="navbar-link"><i class="fas fa-bullhorn"></i> Hoạt Động</a></li>
+                <li class="navbar-item" data-aos="fade-right" data-aos-delay="300"><a href="/yeuthuong/hoatdong.html"
+                        class="navbar-link"><i class="fas fa-pen"></i> Đăng Ký</a></li>
+                <li class="navbar-item" data-aos="fade-right" data-aos-delay="400"><a href="yeuthuong/lienhe.html"
+                        class="navbar-link"><i class="fas fa-phone-alt"></i> Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" data-aos="fade-up" data-aos-duration="1500">
+        <div class="hero-text">
+            <h2>Chung Tay Vì Cộng Đồng</h2>
+            <p>Cùng nhau lan tỏa yêu thương đến mọi miền đất nước.</p>
+            <a href="yeuthuong/dangky.html" class="cta-button">Tham Gia Ngay</a>
+        </div>
+        <div class="hero-image" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200">
+            <img src="public/img/cropped-se-chia-yeu-thuong11.png" class="img-fluid" alt="Tình nguyện viên" />
+        </div>
+    </section>
+
+    <section class="about" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <h2>Về Chúng Tôi</h2>
+        <div class="about-content">
+            <img src="public/img/anhnhomtinhnguyenvien.jpg" class="img-fluid" alt="Giới thiệu tổ chức" />
+            <p>Chúng tôi là một nhóm tình nguyện viên trẻ với trái tim nhiệt huyết. Mục tiêu của chúng tôi là kết nối
+                cộng đồng, hỗ trợ người khó khăn thông qua các hoạt động như hiến máu nhân đạo, tặng quà học sinh nghèo
+                và các chương trình từ thiện khác.</p>
+        </div>
+    </section>
+
+    <section class="features" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="150">
+        <div class="feature" data-aos="flip-left" data-aos-delay="200">
+            <img src="public/img/hienmau.png" class="img-fluid" alt="Hiến máu" />
+            <h3>Hiến Máu</h3>
+            <p>Giọt máu cho đi – cuộc đời ở lại. Mỗi người một tay, góp phần cứu người.</p>
+        </div>
+        <div class="feature" data-aos="flip-left" data-aos-delay="400">
+            <img src="public/img/anhtangqua.jpg" class="img-fluid" alt="Tặng quà" />
+            <h3>Tặng Quà</h3>
+            <p>Chung tay trao quà – Trao hy vọng, tiếp sức cho các em nhỏ đến trường.</p>
+        </div>
+    </section>
+
+    <section class="testimonials" data-aos="zoom-in" data-aos-duration="1200">
+        <h2>Cảm Nhận Người Tham Gia</h2>
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+            <img src="public/img/anhnguoi1.jpg" class="img-fluid" alt="Người 1" width="400px" />
+            <blockquote>"Tôi thật sự xúc động khi thấy nụ cười trên gương mặt các em nhỏ nhận quà."</blockquote>
+            <p>- Nghệ Sĩ Quyền Linh</p>
+        </div>
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="400">
+            <img src="public/img/anhhienmau.jpg" class="img-fluid" alt="Người 2" width="400px" />
+            <blockquote>"Mỗi lần hiến máu là một lần tôi thấy mình sống ý nghĩa hơn."</blockquote>
+            <p>- Anh Trần Công</p>
+        </div>
+    </section>
+
+    <section class="team" data-aos="fade-right" data-aos-duration="1200">
+        <h2>Đội Ngũ Cốt Lõi</h2>
+        <div class="team-container" data-aos="fade-left" data-aos-delay="200">
+            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                <img src="public/img/anh.jpg" class="img-fluid" alt="Lê Hồng Sơn" />
+                <h4>Lê Hồng Sơn</h4>
+                <p>Người sáng lập</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="events" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+        <h2>Sự Kiện Sắp Diễn Ra</h2>
+        <ul>
+            <li><strong>15/05:</strong> Hiến máu tại ĐH Bách Khoa</li>
+            <li><strong>25/05:</strong> Tặng quà học sinh vùng cao - Lào Cai</li>
+        </ul>
+    </section>
+
+    <section class="news" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <h2>Tin Tức Mới Nhất</h2>
+        <div class="news-container" data-aos="fade-left" data-aos-delay="200">
+            <div class="news-item" data-aos="fade-up" data-aos-delay="300">
+                <img src="/public/img/anhtangqua.jpg" class="img-fluid" alt="Tin 1" />
+                <h4>Chương trình tặng quà 1/6 cho trẻ em vùng cao</h4>
+                <p>Hơn 300 phần quà đã được gửi tới các em nhỏ tại Hà Giang trong dịp Quốc tế thiếu nhi.</p>
+            </div>
+            <div class="news-item" data-aos="fade-up" data-aos-delay="400">
+                <img src="/public/img/anhhienmau.jpg" class="img-fluid" alt="Tin 2" />
+                <h4>Hiến máu nhân đạo tại Đại học Quốc Gia</h4>
+                <p>Gần 500 sinh viên đã tham gia và đóng góp hơn 350 đơn vị máu an toàn.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+        <h2>Thư Viện Ảnh</h2>
+        <div class="gallery-container" data-aos="zoom-in" data-aos-delay="200">
+            <img src="public/img/thuvienanh1.png" class="img-fluid" alt="ảnh 1" />
+            <img src="public/img/thuvienanh2.png" class="img-fluid" alt="ảnh 2" />
+            <img src="public/img/thuvienanh3.png" class="img-fluid" alt="ảnh 3" />
+            <img src="public/img/thuvienanh4.png" class="img-fluid" alt="ảnh 4" />
+        </div>
+    </section>
+
+    <section class="faq" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+        <h2>Câu Hỏi Thường Gặp</h2>
+
+        <details data-aos="fade-right" data-aos-delay="150">
+            <summary>Tôi cần điều kiện gì để tham gia hiến máu?</summary>
+            <p>Bạn cần đủ 18 tuổi, khỏe mạnh và không mắc bệnh truyền nhiễm.</p>
+        </details>
+
+        <details data-aos="fade-right" data-aos-delay="300">
+            <summary>Làm thế nào để đăng ký tham gia hoạt động?</summary>
+            <p>Bạn có thể đăng ký qua trang web hoặc liên hệ trực tiếp qua số hotline của chúng tôi.</p>
+        </details>
+    </section>
+
+    <section class="video" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+        <h2>Video Giới Thiệu</h2>
+        <div class="video-container" data-aos="zoom-in" data-aos-delay="200">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/7X6S3Iajz2A" title="Video giới thiệu"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="contact" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+        <h2>Liên Hệ</h2>
+        <form action="send-form.php" method="post" data-aos="fade-left" data-aos-delay="200">
+            <label for="name">Tên của bạn:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email của bạn:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Tin nhắn:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Gửi</button>
+        </form>
+    </section>
+
+    <footer data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+        <p>&copy; 2025 Chia Sẻ Yêu Thương. Bản quyền thuộc về nhóm.</p>
+    </footer>
+
+    <!-- Thư viện AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    </script>
+</body>
+
+</html>

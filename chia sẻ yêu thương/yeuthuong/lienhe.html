@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - Chia Sẻ Yêu Thương</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .contact {
+            background: #fff;
+            padding: 2rem;
+            margin-top: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .contact h2,
+        .map h2 {
+            margin-bottom: 1rem;
+            color: #007BFF;
+        }
+
+        .contact-info p {
+            margin: 0.3rem 0;
+        }
+
+        form label {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin-top: 0.3rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            margin-top: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .map {
+            margin-top: 2rem;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            margin-top: 2rem;
+            padding: 2rem 1rem;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @media (min-width: 768px) {
+            nav ul {
+                flex-direction: row;
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            button[type="submit"] {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header data-aos="fade-down">
+        <h1>Chia Sẻ Yêu Thương</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html"><i class="fas fa-home"></i> Trang Chủ</a></li>
+                <li><a href="/yeuthuong/hoatdong.html"><i class="fas fa-bullhorn"></i> Hoạt Động</a></li>
+                <li><a href="/yeuthuong/dangky.html"><i class="fas fa-pen"></i> Đăng Ký</a></li>
+                <li><a href="/yeuthuong/lienhe.html"><i class="fas fa-phone-alt"></i> Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact" data-aos="fade-up">
+        <h2>Liên Hệ Với Chúng Tôi</h2>
+
+        <div class="contact-info" data-aos="fade-right">
+            <h3>Thông Tin Liên Hệ</h3>
+            <p><strong>Địa chỉ:</strong> 123 Đường XYZ, Quận ABC, TP. Hà Nội</p>
+            <p><strong>Điện thoại:</strong> (012) 345 6789</p>
+            <p><strong>Email:</strong> chia.se.yt@gmail.com</p>
+        </div>
+
+        <div class="contact-form" data-aos="fade-left">
+            <form id="contact-form">
+                <label for="user_name">Họ và tên:</label>
+                <input type="text" id="user_name" name="user_name" required>
+
+                <label for="user_email">Email:</label>
+                <input type="email" id="user_email" name="user_email" required>
+
+                <label for="message">Nội dung:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" id="submitBtn">Gửi</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="map" data-aos="zoom-in-up">
+        <h2>Vị Trí Của Chúng Tôi</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.908123!2d105.8136341!3d21.0362376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4c95c5e75d%3A0x6dd5a8aa6c9244f4!2zSOG6o2kgSMOyYSBC4buLIMSQ4bqhaSBI4bqjbmc!5e0!3m2!1svi!2s!4v1614245003195!5m2!1svi!2s"
+            loading="lazy" allowfullscreen>
+        </iframe>
+    </section>
+
+    <footer data-aos="fade-up">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Về Chúng Tôi</h4>
+                <p>“Chia Sẻ Yêu Thương” là tổ chức tình nguyện hoạt động vì cộng đồng từ năm 2025.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Nhà Tài Trợ</h4>
+                <ul>
+                    <li>Ngân hàng Hồng Sơn</li>
+                    <li>Công ty Hồng Sơn</li>
+                    <li>Quỹ Thiện Nguyện Trái Tim</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kết Nối</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/ma.sat.754918" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.youtube.com/@SonLe-lw5ev"><i class="fab fa-youtube"></i> YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Chia Sẻ Yêu Thương. Thiết kế bởi đội tình nguyện viên 💙</p>
+            <a href="#top" class="back-to-top">⬆️ Quay lại đầu trang</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        (function () {
+            emailjs.init("BfomKw3INVJPKc4mx");
+
+            const form = document.getElementById("contact-form");
+            const submitBtn = document.getElementById("submitBtn");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Đang gửi...";
+
+                emailjs.sendForm("service_ebanwzp", "template_mp0rdco", form)
+                    .then(() => {
+                        alert("Email đã được gửi thành công!");
+                        form.reset();
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = "Gửi";
+                    }, (error) => {
+                        console.error(error);
+                        alert("Có lỗi xảy ra. Vui lòng thử lại.");
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = "Gửi";
+                    });
+            });
+        })();
+    </script>
+</body>
+
+</html>

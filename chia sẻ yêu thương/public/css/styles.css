@@ -1,0 +1,468 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Header styles */
+header {
+    background-color: #1d6ac4;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+nav ul li:nth-child(1) {
+    --i: 1;
+}
+
+nav ul li:nth-child(2) {
+    --i: 2;
+}
+
+nav ul li:nth-child(3) {
+    --i: 3;
+}
+
+nav ul li:nth-child(4) {
+    --i: 4;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #e1f3fd;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    animation: bounceIn 2s ease-in-out;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Section styles */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Features section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    background-color: #f7fbff;
+}
+
+.feature {
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.feature img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Testimonials section */
+.testimonials {
+    background-color: #e1f3fd;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1d6ac4;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #cfe5ff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    border-top: 1px solid #cfe5ff;
+    padding-top: 10px;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+img {
+    max-width: 100%;
+    /* Ensure the image does not overflow its container */
+    height: auto;
+    /* Maintain aspect ratio */
+
+}
+
+/* Image with Border and Rounded Corners */
+img {
+    border-radius: 10px;
+    /* Round the corners of the image */
+    border: 2px solid #ccc;
+    /* Add a border around the image */
+}
+
+/* Hover Effect for Images */
+img {
+    transition: transform 0.3s ease;
+    /* Smooth transition effect */
+}
+
+img:hover {
+    transform: scale(1.1);
+    /* Enlarge the image on hover */
+}
+
+/* Cropped Image with Fixed Dimensions */
+img {
+    width: 100%;
+    /* Set fixed width */
+    height: 100%;
+    /* Set fixed height */
+    object-fit: cover;
+    /* Crop the image to fill the container */
+}
+
+/* Circular Image */
+img {
+    border-radius: 70%;
+    /* Create a circular image */
+    width: 300px;
+    /* Set fixed width */
+    height: 300px;
+    /* Set fixed height */
+}
+
+/* Image with Shadow Effect */
+img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add a soft shadow to the image */
+}
+
+/* Image with Border, Rounded Corners, and Hover Effect */
+img {
+    border-radius: 10px;
+    border: 3px solid #3498db;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    /* Enlarge the image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Increase the shadow effect on hover */
+}
+body {
+        opacity: 0;
+        animation: fadeInPage 1.5s ease forwards;
+    }
+
+    @keyframes fadeInPage {
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Hiệu ứng slide từ dưới lên và mờ dần cho các section */
+    section {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: slideFadeIn 1s ease forwards;
+        animation-delay: 0.3s; /* Delay mặc định */
+    }
+
+    /* Tăng dần thời gian delay cho từng section để tạo hiệu ứng xuất hiện nối tiếp */
+    section:nth-of-type(1) { animation-delay: 0.3s; }
+    section:nth-of-type(2) { animation-delay: 0.6s; }
+    section:nth-of-type(3) { animation-delay: 0.9s; }
+    section:nth-of-type(4) { animation-delay: 1.2s; }
+    section:nth-of-type(5) { animation-delay: 1.5s; }
+    section:nth-of-type(6) { animation-delay: 1.8s; }
+    section:nth-of-type(7) { animation-delay: 2.1s; }
+    section:nth-of-type(8) { animation-delay: 2.4s; }
+    section:nth-of-type(9) { animation-delay: 2.7s; }
+    section:nth-of-type(10) { animation-delay: 3.0s; }
+    section:nth-of-type(11) { animation-delay: 3.3s; }
+
+    @keyframes slideFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Hiệu ứng hover cho nút "Tham Gia Ngay" và các nút khác */
+    .cta-button, button {
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .cta-button:hover, button:hover {
+        transform: scale(1.05);
+        background-color: #0056b3; /* Màu thay đổi khi hover, bạn chỉnh màu cho phù hợp */
+        cursor: pointer;
+    }
+
+    /* Hiệu ứng hover cho các mục trong navbar */
+    .navbar-link {
+        transition: color 0.3s ease, border-bottom 0.3s ease;
+        border-bottom: 2px solid transparent;
+    }
+    .navbar-link:hover {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+    }
+
+    /* Hiệu ứng xuất hiện nhẹ cho ảnh (fade-in) */
+    img.img-fluid {
+        opacity: 0;
+        animation: imgFadeIn 1s ease forwards;
+    }
+    img.img-fluid:nth-of-type(1) { animation-delay: 0.5s; }
+    img.img-fluid:nth-of-type(2) { animation-delay: 1s; }
+    img.img-fluid:nth-of-type(3) { animation-delay: 1.5s; }
+    img.img-fluid:nth-of-type(4) { animation-delay: 2s; }
+    @keyframes imgFadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Hiệu ứng chuyển động mờ cho footer khi xuất hiện */
+    footer {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: footerFadeIn 1s ease forwards;
+        animation-delay: 3.5s;
+    }
+    @keyframes footerFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Hiệu ứng nút quay lại đầu trang */
+    .back-to-top {
+        display: inline-block;
+        padding: 8px 12px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .back-to-top:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+    }

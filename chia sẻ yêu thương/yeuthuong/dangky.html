@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tình Nguyện</title>
+    <style>
+        /* Animation xuất hiện */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #2a6ebd;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #2a6ebd;
+            box-shadow: 0 0 5px rgba(42, 110, 189, 0.4);
+            outline: none;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #6fa3ef;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #4d8de3;
+            transform: translateY(-2px);
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-home a {
+            color: #2a6ebd;
+            text-decoration: none;
+            transition: text-decoration 0.2s;
+        }
+
+        .back-home a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Đăng Ký Tình Nguyện</h2>
+        <form action="#" method="post">
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Số điện thoại</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="activity">Chọn hoạt động</label>
+            <select id="activity" name="activity" required>
+                <option value="">-- Vui lòng chọn --</option>
+                <option value="hien-mau">Hiến máu nhân đạo</option>
+                <option value="tang-qua">Tặng quà học sinh nghèo</option>
+                <option value="khac">Khác</option>
+            </select>
+
+            <label for="note">Ghi chú (nếu có)</label>
+            <textarea id="note" name="note" rows="4" placeholder="Thời gian tham gia, kinh nghiệm, v.v..."></textarea>
+
+            <button type="submit">Gửi Đăng Ký</button>
+        </form>
+
+        <div class="back-home">
+            <p><a href="../index.html">← Quay về Trang Chủ</a></p>
+        </div>
+    </div>
+</body>
+</html>
